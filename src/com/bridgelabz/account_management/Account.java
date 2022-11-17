@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class Account {
 
-	int totalBalance = 0;
-	Scanner sc = new Scanner(System.in);
+	static Scanner sc = new Scanner(System.in);
+	public static int totalBalance = 0;
 
 	public void debit() {
 		System.out.println("Enter amount you can withdrawn : ");
@@ -18,10 +18,10 @@ public class Account {
 		}
 	}
 
-	public void addAmount() {
+	public static void addAmount(int addAmount) {
 		System.out.println("Enter amount you can Add : ");
-		int addamount = sc.nextInt();
-		totalBalance += addamount;
+		addAmount = sc.nextInt();
+		totalBalance += addAmount;
 		System.out.println("your total balance is : " + totalBalance);
 	}
 }
